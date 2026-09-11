@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus | El Roble Academy</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7f2;
+            color: #333;
+        }
+
+        /* =========================
+           BANNER
+        ========================= */
+
+        .banner {
+            background: linear-gradient(135deg, #164a2d, #287a47);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .banner h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .banner p {
+            font-size: 17px;
+        }
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #164a2d;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 18px 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #164a2d;
+            color: white;
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .page-title {
+            background-color: #e5efe6;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .page-title h2 {
+            color: #164a2d;
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+        }
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            background-color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .intro h2 {
+            color: #164a2d;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           CAMPUS SECTIONS
+        ========================= */
+
+        .campus {
+            padding: 60px 20px;
+        }
+
+        .campus-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .campus-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .campus-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        /* IMAGES */
+
+        .campus-image {
+            height: 190px;
+            overflow: hidden;
+            background-color: #dce8dd;
+        }
+
+        .campus-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .campus-card:hover .campus-image img {
+            transform: scale(1.08);
+        }
+
+        /* INFORMATION */
+
+        .campus-info {
+            padding: 25px;
+        }
+
+        .campus-info h3 {
+            color: #164a2d;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .campus-info p {
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* =========================
+           SPECIAL SECTION
+        ========================= */
+
+        .campus-message {
+            background-color: #164a2d;
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .campus-message h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .campus-message p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           TOUR
+        ========================= */
+
+        .tour {
+            background-color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .tour h2 {
+            color: #164a2d;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .tour p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .tour-button {
+            display: inline-block;
+            background-color: #164a2d;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .tour-button:hover {
+            background-color: #287a47;
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #164a2d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .campus-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .page-title h2 {
+                font-size: 34px;
+            }
+
+            .campus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .campus-image {
+                height: 220px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<header class="banner">
+
+    <h1>EL ROBLE ACADEMY</h1>
+
+    <p>
+        E.R.A. | Education, Excellence & Character
+    </p>
+
+</header>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<nav>
+
+    <a href="index.html">INDEX</a>
+
+    <a href="about.html">ABOUT US</a>
+
+    <a href="history.html">HISTORY</a>
+
+    <a href="achievement.html">ACHIEVEMENT</a>
+
+    <a href="campus.html">CAMPUS</a>
+
+    <a href="contact.html">CONTACT</a>
+
+</nav>
+
+
+<!-- =========================
+     TITLE
+========================= -->
+
+<section class="page-title">
+
+    <h2>OUR CAMPUS</h2>
+
+    <p>
+        Explore the different sections of El Roble Academy.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="intro">
+
+    <h2>Our School Campus</h2>
+
+    <p>
+
+        El Roble Academy's campus is organized into different
+        areas that allow our students to learn, socialize,
+        practice sports, develop their skills, and enjoy
+        different school activities.
+
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CAMPUS SECTIONS
+========================= -->
+
+<section class="campus">
+
+    <div class="campus-grid">
+
+
+        <!-- CLASSROOMS -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="CLASSROOMS.jpeg"
+                    alt="Classrooms"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>📚 Classrooms</h3>
+
+                <p>
+
+                    Our classrooms are welcoming spaces designed
+                    for learning, participation, and the academic
+                    development of our students.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SPORTS -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="SPORTS.jpeg"
+                    alt="Sports Area"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>⚽ Sports Area</h3>
+
+                <p>
+
+                    Our sports areas provide students with
+                    opportunities to practice different sports,
+                    develop their skills, and learn the importance
+                    of teamwork.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- LABORATORIES -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="LABORATORY.jpeg"
+                    alt="Laboratories"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>🔬 Laboratories</h3>
+
+                <p>
+
+                    Our laboratories are designed for practical
+                    activities where students can explore science,
+                    conduct experiments, and discover how the world
+                    works.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GREEN AREAS -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="GREEN.jpeg"
+                    alt="Green Areas"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>🌳 Green Areas</h3>
+
+                <p>
+
+                    Our outdoor green areas provide students with
+                    peaceful spaces to relax, socialize, and enjoy
+                    recreational activities during the school day.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAFETERIA -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="CAFETERIA.jpeg"
+                    alt="Cafeteria"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>🍎 Cafeteria</h3>
+
+                <p>
+
+                    Our cafeteria is a comfortable space where
+                    students can enjoy their meals, spend time
+                    with friends, and share moments during the
+                    school day.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AUDITORIUM -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="AUDITORIUM.JPEG"
+                    alt="Auditorium"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>🎭 Auditorium</h3>
+
+                <p>
+
+                    Our auditorium is a versatile space for
+                    events, presentations, cultural activities,
+                    meetings, celebrations, and special school
+                    programs.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMINISTRATION -->
+
+        <div class="campus-card">
+
+            <div class="campus-image">
+
+                <img
+                    src="ADMINISTRATION.jpeg"
+                    alt="Administration"
+                >
+
+            </div>
+
+            <div class="campus-info">
+
+                <h3>🏫 Administration</h3>
+
+                <p>
+
+                    The administration area is where different
+                    aspects of school life are coordinated and
+                    where students and families can receive
+                    assistance and support.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="campus-message">
+
+    <h2>A Place to Learn & Grow</h2>
+
+    <p>
+
+        Every space on our campus has a purpose: to create
+        an environment where students can learn, connect,
+        discover their talents, and grow as individuals.
+        At E.R.A., our campus is more than a place to study;
+        it is an important part of our community.
+
+    </p>
+
+</section>
+
+
+<!-- =========================
+     TOUR
+========================= -->
+
+<section class="tour">
+
+    <h2>Explore E.R.A.</h2>
+
+    <p>
+
+        Discover our different areas and explore the spaces
+        that are part of the student experience at
+        El Roble Academy.
+
+    </p>
+
+    <a
+        href="about.html"
+        class="tour-button"
+    >
+        Back to About Us
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        <strong>El Roble Academy (E.R.A.)</strong>
+    </p>
+
+    <p>
+        © 2026 El Roble Academy. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>

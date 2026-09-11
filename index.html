@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>El Roble Academy | E.R.A.</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7f2;
+            color: #333;
+        }
+
+        /* STATIC BANNER */
+        .banner {
+            background: linear-gradient(135deg, #164a2d, #287a47);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .banner h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .banner p {
+            font-size: 17px;
+        }
+
+        /* NAVIGATION MENU */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #164a2d;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 18px 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #164a2d;
+            color: white;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 55, 30, 0.70),
+                    rgba(0, 55, 30, 0.70)
+                ),
+                url("images/school.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #164a2d;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #d9ead3;
+            transform: scale(1.05);
+        }
+
+        /* WELCOME SECTION */
+        .welcome {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: white;
+        }
+
+        .welcome h2 {
+            color: #164a2d;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #164a2d;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #164a2d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE DEVICES */
+        @media (max-width: 700px) {
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- STATIC BANNER -->
+    <header class="banner">
+
+        <h1>EL ROBLE ACADEMY</h1>
+
+        <p>
+            E.R.A. | Education, Excellence & Character
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION MENU -->
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <a href="about.html">ABOUT US</a>
+
+        <a href="history.html">HISTORY</a>
+
+        <a href="achievement.html">ACHIEVEMENTS</a>
+
+        <a href="campus.html">CAMPUS</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+
+    <!-- MAIN PAGE -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>
+                Welcome to El Roble Academy
+            </h2>
+
+            <p>
+                Welcome to the official website of El Roble Academy,
+                also known as E.R.A. We are a community where education,
+                strong values, and excellence come together to inspire
+                students to learn, grow, and achieve their goals.
+            </p>
+
+            <a href="about.html" class="button">
+                Learn More About Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- WELCOME MESSAGE -->
+    <section class="welcome">
+
+        <h2>
+            Welcome to Our School
+        </h2>
+
+        <p>
+            At El Roble Academy, we believe that every student has
+            the potential to achieve great things. Our mission is to
+            provide a quality education in a safe, positive, and
+            supportive environment where students have the opportunity
+            to learn, grow, develop their talents, and achieve success.
+        </p>
+
+    </section>
+
+
+    <!-- CARDS -->
+    <section class="cards">
+
+        <div class="card">
+
+            <h3>
+                Our Community
+            </h3>
+
+            <p>
+                We are a united educational community committed to
+                supporting the growth, development, and well-being
+                of every student.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Our Excellence
+            </h3>
+
+            <p>
+                We strive for excellence in academics, sports,
+                the arts, personal development, and every area
+                of student life.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Our Future
+            </h3>
+
+            <p>
+                We prepare our students to face the future with
+                confidence, responsibility, leadership, and the
+                skills needed to make a positive difference.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            <strong>El Roble Academy (E.R.A.)</strong>
+        </p>
+
+        <p>
+            © 2026 El Roble Academy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
